@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator | by Ankush</title>
+
+    <!-- ===== LINKING STYLESHEET ===== -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ===== FONT AWESOME CSS ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <!-- ===== INCLUDE MATH.JS LIBRARY ===== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+        integrity="sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+</head>
+
+<body>
+    <section id="main">
+        <div class="container">
+            <form>
+                <div class="display">
+                    <input type="text" id="display">
+                </div>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion()">
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="insider div1 active">
+                                <input type="button" value="sin" onclick="display.value += 'sin('">
+                                <input type="button" value="cos" onclick="display.value += 'cos('">
+                                <input type="button" value="tan" onclick="display.value += 'tan('">
+                                <input type="button" value="log" onclick="display.value += 'log10('">
+                                <input type="button" value="ln" onclick="base10Log()">
+                            </div>
+                            <div class="insider div2">
+                                <input type="button" value="sin⁻¹" onclick="display.value += 'asin('">
+                                <input type="button" value="cos⁻¹" onclick="display.value += 'acos('">
+                                <input type="button" value="tan⁻¹" onclick="display.value += 'arctan('">
+                                <input type="button" value="10^" onclick="display.value += '10^('">
+                                <input type="button" value="eˣ" onclick="display.value += 'e^'">
+                            </div>
+                            <div class="insider">
+                                <input type="button" value="(" onclick="display.value += '('">
+                                <input type="button" value=")" onclick="display.value += ')'">
+                                <input type="button" value="^" onclick="power()">
+                                <input type="button" value="√" onclick="squareRoot()">
+                                <input type="button" value="!" onclick="display.value += '!'">
+                            </div>
+                            <div class="insider">
+                                <input type="button" value="π" onclick="pi()">
+                                <input type="button" value="e" onclick="e()">
+                                <input type="button" value="x²" onclick="display.value += '^2'">
+                                <input type="button" value="INV" onclick="toggleDivs()">
+                                <input type="button" id="toggleBtn" value="DEG" onclick="toggleDeg()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <input type="button" value="C" onclick="display.value = ''">
+                    <input type="button" value="%" onclick="display.value += '%'">
+                    <input type="button" value="⌫" onclick="backspace()">
+                    <input type="button" value="÷" onclick="display.value += '/'" class="operator">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="display.value += '7'">
+                    <input type="button" value="8" onclick="display.value += '8'">
+                    <input type="button" value="9" onclick="display.value += '9'">
+                    <input type="button" value="×" onclick="display.value += '*'" class="operator">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="display.value += '4'">
+                    <input type="button" value="5" onclick="display.value += '5'">
+                    <input type="button" value="6" onclick="display.value += '6'">
+                    <input type="button" value="–" onclick="display.value += '-'" class="operator">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="display.value += '1'">
+                    <input type="button" value="2" onclick="display.value += '2'">
+                    <input type="button" value="3" onclick="display.value += '3'">
+                    <input type="button" value="+" onclick="display.value += '+'" class="operator">
+                </div>
+                <div>
+                    <input type="button" value="00" onclick="display.value += '00'">
+                    <input type="button" value="0" onclick="display.value += '0'">
+                    <input type="button" value="." onclick="display.value += '.'">
+                    <input type="button" value="=" onclick="calculate()" class="operator">
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <!-- ========= LINKING JAVASCRIPT  ========= -->
+    <script src="main.js"></script>
+    <script>
+        function toggleDivs() {
+            let div1 = document.querySelector('.div1');
+            let div2 = document.querySelector('.div2');
+
+            div1.classList.toggle('active');
+            div2.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>
