@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   font-family: 'Poppins', sans-serif;
+   box-sizing: border-box;
+}
+
+body{
+   background: linear-gradient(45deg, #341f6e, #8f6dff);
+}
+
+#main {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   width: 100%;
+}
+
+.container {
+   background: #252f4154;
+   color: #fff;
+   padding: 20px;
+   outline: 0;
+   border: 0;
+   border-radius: 10px;
+   width: 374px;
+   backdrop-filter: blur(40px);
+}
+
+form .display {
+   display: flex;
+   justify-content: flex-end;
+   margin: 20px 0;
+}
+
+form .display input {
+   box-shadow: none;
+   text-align: right;
+   font-size: 45px;
+   flex: 1;
+}
+
+form input {
+   width: 60px;
+   height: 60px;
+   background: transparent;
+   color: #fff;
+   outline: 0;
+   border: 0;
+   margin: 10px;
+   border-radius: 10px;
+   font-size: 25px;
+   font-weight: 300;
+}
+
+form .operator {
+   color: aquamarine;
+   position: absolute;
+   font-weight: 300;
+   font-size: 34px;
+}
+
+.accordion-header {
+   padding: 10px;
+   cursor: pointer;
+   background-color: transparent;
+   color: #252f41;
+}
+
+.accordion-content {
+   overflow: hidden;
+   max-height: 0;
+   transition: max-height 0.3s ease-out;
+   border-bottom: .1px solid #ffffff7c;
+   border-top: .1px solid #ffffff7c;
+}
+
+.accordion-item.active .accordion-content {
+   max-height: 1000px;
+}
+
+.accordion-item i {
+   color: #ffffff8f;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.accordion-item.active i {
+   transform: translateY(-50%) rotate(-180deg);
+}
+
+
+
+.insider input {
+   font-size: 16px;
+   width: 40px;
+   height: 40px;
+}
+
+
+.div1.active {
+   display: block;
+}
+
+.div2 {
+   display: none;
+}
+
+.div2.active {
+   display: block;
+}
+
+.div1 {
+   display: none;
+}
+
+#toggleBtn{
+   border: 1px solid #3025413b;
+   background-color: #3025410f;
+   border-radius: 50%;
+}
+#toggleBtn:hover{
+   box-shadow: inset -1px -2px 7px #fff, inset 1px 2px 5px #ceced1;
+}
+
+@media only screen and (max-width: 540px) {
+
+}
