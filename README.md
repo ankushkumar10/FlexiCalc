@@ -56,7 +56,7 @@ Example:
 
 ---
 
-📌 Usage Guide
+## 📌 Usage Guide
 
 ▶ Basic Usage
 	•	Click buttons to input numbers and operators
@@ -79,9 +79,9 @@ Toggle between DEG (degrees) and RAD (radians).
 📉 Collapsible Panel
 Click the arrow button to show/hide scientific keys, making it ideal for mobile.
 
-⸻
+---
 
-🧪 Error Handling
+## 🧪 Error Handling
 
 FlexiCalc displays clean error messages for:
 	•	Invalid math input
@@ -91,14 +91,14 @@ FlexiCalc displays clean error messages for:
 
 The calculator resets automatically after displaying an error.
 
-⸻
+---
 
-💬 Feedback
+## 💬 Feedback
 
 If you like this project, please ⭐ the repository!
 If you have suggestions for new features, feel free to open an issue.
 
-⸻
+---
 
 🔥 Created by Ankush Kumar
 
