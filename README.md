@@ -88,10 +88,10 @@ Click the arrow button to show/hide scientific keys, making it ideal for mobile.
 ## 🧪 Error Handling
 
 FlexiCalc displays clean error messages for:
-	•	Invalid math input
-	•	Out-of-domain inverse trig functions
-	•	Division by zero
-	•	Improper expressions
+- Invalid math input
+- Out-of-domain inverse trig functions
+- Division by zero
+- Improper expressions
 
 The calculator resets automatically after displaying an error.
 
