@@ -71,7 +71,8 @@ FlexiCalc supports **trigonometry**, **inverse functions**, **logarithms**, **po
 ▶ Scientific Controls
 
 🔁 INV Button
-- Toggles between:
+  
+&nbsp;&nbsp;&nbsp;&nbsp;Toggles between:
 - sin ↔ sin⁻¹
 - cos ↔ cos⁻¹
 - tan ↔ tan⁻¹
