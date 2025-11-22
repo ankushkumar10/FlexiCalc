@@ -5,7 +5,7 @@ FlexiCalc supports **trigonometry**, **inverse functions**, **logarithms**, **po
 ---
 
 ## 🚀 Demo  
-👉 **Live Demo:** *(https://ankushkumar10.github.io/FlexiCalc/)*
+👉 **Live Demo:** *https://ankushkumar10.github.io/FlexiCalc/*
 
 ---
 
@@ -56,38 +56,6 @@ Example:
 
 ---
 
-## 📂 Project Structure
-
-FlexiCalc/
-│
-├── index.html        # Main HTML structure
-├── style.css         # Complete styling + animations
-├── main.js           # Calculator functionality
-└── README.md         # Project documentation
-
----
-
-## ⚙️ Installation & Setup
-
-Follow these steps:
-
-### 1️⃣ Clone the repository
-```bash
-git clone https://github.com/YOUR-USERNAME/FlexiCalc.git
-
-2️⃣ Enter the project folder
-
-cd FlexiCalc
-
-3️⃣ Run the project
-
-Since this is a simple front-end project, you can:
-	•	Open index.html directly in a browser
-OR
-	•	Use Live Server (recommended if you’re using VS Code)
-
-⸻
-
 📌 Usage Guide
 
 ▶ Basic Usage
@@ -125,33 +93,6 @@ The calculator resets automatically after displaying an error.
 
 ⸻
 
-🧑‍💻 Contribution
-
-Contributions are welcome!
-	1.	Fork the project
-	2.	Create your feature branch
-
-git checkout -b feature-name
-
-	3.	Commit your changes
-
-git commit -m "Add new feature"
-
-	4.	Push to your branch
-
-git push origin feature-name
-
-	5.	Submit a pull request
-
-⸻
-
-📄 License
-
-This project is open-source and available under the MIT License.
-Feel free to use, modify, and share!
-
-⸻
-
 💬 Feedback
 
 If you like this project, please ⭐ the repository!
@@ -162,4 +103,3 @@ If you have suggestions for new features, feel free to open an issue.
 🔥 Created by Ankush Kumar
 
 FlexiCalc — The Flexible, Modern Scientific Calculator
-
