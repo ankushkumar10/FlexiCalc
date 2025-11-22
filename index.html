@@ -1,114 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator | by Ankush</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexiCalc</title>
 
-    <!-- ===== LINKING STYLESHEET ===== -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
-    <!-- ===== FONT AWESOME CSS ===== -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
 
-    <!-- ===== INCLUDE MATH.JS LIBRARY ===== -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
-        integrity="sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-    </script>
+    <!-- Math.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
 </head>
 
 <body>
-    <section id="main">
-        <div class="container">
-            <form>
-                <div class="display">
-                    <input type="text" id="display">
-                </div>
-                <div class="accordion">
-                    <div class="accordion-item">
-                        <div class="accordion-header" onclick="toggleAccordion()">
-                            <i class="fa-solid fa-angle-down"></i>
-                        </div>
-                        <div class="accordion-content">
-                            <div class="insider div1 active">
-                                <input type="button" value="sin" onclick="display.value += 'sin('">
-                                <input type="button" value="cos" onclick="display.value += 'cos('">
-                                <input type="button" value="tan" onclick="display.value += 'tan('">
-                                <input type="button" value="log" onclick="display.value += 'log10('">
-                                <input type="button" value="ln" onclick="base10Log()">
-                            </div>
-                            <div class="insider div2">
-                                <input type="button" value="sin⁻¹" onclick="display.value += 'asin('">
-                                <input type="button" value="cos⁻¹" onclick="display.value += 'acos('">
-                                <input type="button" value="tan⁻¹" onclick="display.value += 'arctan('">
-                                <input type="button" value="10^" onclick="display.value += '10^('">
-                                <input type="button" value="eˣ" onclick="display.value += 'e^'">
-                            </div>
-                            <div class="insider">
-                                <input type="button" value="(" onclick="display.value += '('">
-                                <input type="button" value=")" onclick="display.value += ')'">
-                                <input type="button" value="^" onclick="power()">
-                                <input type="button" value="√" onclick="squareRoot()">
-                                <input type="button" value="!" onclick="display.value += '!'">
-                            </div>
-                            <div class="insider">
-                                <input type="button" value="π" onclick="pi()">
-                                <input type="button" value="e" onclick="e()">
-                                <input type="button" value="x²" onclick="display.value += '^2'">
-                                <input type="button" value="INV" onclick="toggleDivs()">
-                                <input type="button" id="toggleBtn" value="DEG" onclick="toggleDeg()">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <input type="button" value="C" onclick="display.value = ''">
-                    <input type="button" value="%" onclick="display.value += '%'">
-                    <input type="button" value="⌫" onclick="backspace()">
-                    <input type="button" value="÷" onclick="display.value += '/'" class="operator">
-                </div>
-                <div>
-                    <input type="button" value="7" onclick="display.value += '7'">
-                    <input type="button" value="8" onclick="display.value += '8'">
-                    <input type="button" value="9" onclick="display.value += '9'">
-                    <input type="button" value="×" onclick="display.value += '*'" class="operator">
-                </div>
-                <div>
-                    <input type="button" value="4" onclick="display.value += '4'">
-                    <input type="button" value="5" onclick="display.value += '5'">
-                    <input type="button" value="6" onclick="display.value += '6'">
-                    <input type="button" value="–" onclick="display.value += '-'" class="operator">
-                </div>
-                <div>
-                    <input type="button" value="1" onclick="display.value += '1'">
-                    <input type="button" value="2" onclick="display.value += '2'">
-                    <input type="button" value="3" onclick="display.value += '3'">
-                    <input type="button" value="+" onclick="display.value += '+'" class="operator">
-                </div>
-                <div>
-                    <input type="button" value="00" onclick="display.value += '00'">
-                    <input type="button" value="0" onclick="display.value += '0'">
-                    <input type="button" value="." onclick="display.value += '.'">
-                    <input type="button" value="=" onclick="calculate()" class="operator">
-                </div>
-            </form>
+    <div class="calculator">
+
+        <!-- Display Section -->
+        <div class="display-container">
+            <div class="history" id="history"></div>
+            <input type="text" id="display" class="display" readonly />
         </div>
-    </section>
-    
-    <!-- ========= LINKING JAVASCRIPT  ========= -->
-    <script src="main.js"></script>
-    <script>
-        function toggleDivs() {
-            let div1 = document.querySelector('.div1');
-            let div2 = document.querySelector('.div2');
 
-            div1.classList.toggle('active');
-            div2.classList.toggle('active');
-        }
-    </script>
+        <!-- Control Buttons -->
+        <div class="control-buttons">
+            <button class="btn function" id="collapse-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    viewBox="0 0 16 16">
+                    <path d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 
+                    5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                </svg>
+            </button>
 
+            <div class="mode-toggle">
+                <div class="toggle-switch">
+                    <input type="checkbox" id="angle-mode" class="toggle-input" />
+                    <label for="angle-mode" class="toggle-label">
+                        <span class="toggle-option deg">DEG</span>
+                        <span class="toggle-option rad">RAD</span>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Keypad -->
+        <div class="keypad">
+
+            <!-- Advanced Function Keys -->
+            <div class="function-keys" id="advanced-functions">
+
+                <!-- Normal Trig -->
+                <button class="btn function trig-normal" data-op="sin(">sin</button>
+                <button class="btn function trig-normal" data-op="cos(">cos</button>
+                <button class="btn function trig-normal" data-op="tan(">tan</button>
+
+                <!-- Inverse Trig -->
+                <button class="btn function trig-inverse" data-op="asin(" style="display:none">sin⁻¹</button>
+                <button class="btn function trig-inverse" data-op="acos(" style="display:none">cos⁻¹</button>
+                <button class="btn function trig-inverse" data-op="atan(" style="display:none">tan⁻¹</button>
+
+                <button class="btn function" data-op="(">(</button>
+                <button class="btn function" data-op="log10(">log</button>
+                <button class="btn function" data-op="log(">ln</button>
+                <button class="btn function" data-op="factorial(">x!</button>
+                <button class="btn function" data-op=")">)</button>
+
+                <button class="btn function" data-op="pi">π</button>
+                <button class="btn function" data-op="e">e</button>
+                <button class="btn function" data-op="^">^</button>
+                <button class="btn function" data-op="sqrt(">√</button>
+
+                <button class="btn function" data-op="10^">10^</button>
+                <button class="btn function" data-op="nthRoot(">ʸ√x</button>
+                <button class="btn function" data-op=", ">␣</button>
+                <button class="btn function" id="inv-btn">INV</button>
+            </div>
+
+            <!-- Number + Operator Keys -->
+            <div class="number-keys">
+                <button class="btn function operator" data-action="clear">AC</button>
+                <button class="btn function operator" data-action="backspace">⌫</button>
+                <button class="btn function operator" data-op="%">%</button>
+                <button class="btn operator small-txt" data-op="/">÷</button>
+
+                <button class="btn number" data-op="7">7</button>
+                <button class="btn number" data-op="8">8</button>
+                <button class="btn number" data-op="9">9</button>
+                <button class="btn operator small-txt" data-op="*">×</button>
+
+                <button class="btn number" data-op="4">4</button>
+                <button class="btn number" data-op="5">5</button>
+                <button class="btn number" data-op="6">6</button>
+                <button class="btn operator small-txt" data-op="-">−</button>
+
+                <button class="btn number" data-op="1">1</button>
+                <button class="btn number" data-op="2">2</button>
+                <button class="btn number" data-op="3">3</button>
+                <button class="btn operator small-txt" data-op="+">+</button>
+
+                <button class="btn number" data-op="0">0</button>
+                <button class="btn number" data-op=".">.</button>
+                <button class="btn number" data-op="00">00</button>
+                <button class="btn calculate small-txt" data-action="calculate">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js" defer></script>
 </body>
-
 </html>
