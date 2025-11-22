@@ -41,7 +41,10 @@ FlexiCalc supports **trigonometry**, **inverse functions**, **logarithms**, **po
 
 ## 🖼️ Screenshots
 
-Example:
+|  Desktop View  |  Mobile View  |
+|-----------|-----------|
+| ![](Screenshots/image1.png) | ![](Screenshots/image4.png) |
+| ![](Screenshots/image2.png) | ![](Screenshots/image3.png) |
 
 ---
 
