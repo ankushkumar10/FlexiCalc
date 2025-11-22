@@ -100,6 +100,7 @@ The calculator resets automatically after displaying an error.
 ## 💬 Feedback
 
 If you like this project, please ⭐ the repository!
+
 If you have suggestions for new features, feel free to open an issue.
 
 ---
