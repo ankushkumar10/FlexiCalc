@@ -62,19 +62,19 @@ FlexiCalc supports **trigonometry**, **inverse functions**, **logarithms**, **po
 ## 📌 Usage Guide
 
 ▶ Basic Usage
-	•	Click buttons to input numbers and operators
-	•	Press = to evaluate
-	•	Use AC to clear
-	•	Use ⌫ to delete one character
-	•	Keyboard input is supported
+- Click buttons to input numbers and operators
+- Press = to evaluate
+- Use AC to clear
+- Use ⌫ to delete one character
+- Keyboard input is supported
 
 ▶ Scientific Controls
 
 🔁 INV Button
-	•	Toggles between:
-	•	sin ↔ sin⁻¹
-	•	cos ↔ cos⁻¹
-	•	tan ↔ tan⁻¹
+- Toggles between:
+- sin ↔ sin⁻¹
+- cos ↔ cos⁻¹
+- tan ↔ tan⁻¹
 
 📐 Angle Mode
 Toggle between DEG (degrees) and RAD (radians).
